@@ -1,0 +1,29 @@
+{
+  "name": "com_guoyingxu",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "devDependencies": {
+    "ts-node": "3.3.0",
+    "@types/node": "^8.0.29",
+    "typescript": "2.5.2"
+  },
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.1.0",
+    "koa-router": "^7.3.0",
+    "koa-session": "^5.5.1",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.2",
+    "mysql": "^2.14.1",
+    "pug": "^2.0.0-rc.4",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "0.1.6"
+  },
+  "scripts": {
+    "start": "export NODE_ENV=develop && export PORT=4000 && ts-node src/index.ts",
+    "migrations:generate": "ts-node ./node_modules/typeorm/cli.js migrations:generate",
+    "migrations:run": "ts-node ./node_modules/typeorm/cli.js migrations:run",
+    "migrations:revert": "ts-node ./node_modules/typeorm/cli.js migrations:revert"
+  }
+}

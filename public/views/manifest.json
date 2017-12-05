@@ -1,0 +1,12 @@
+{
+  "home/home.css": "http://127.0.0.1:8080/assets/views/home/home.css",
+  "home/home.css.map": "http://127.0.0.1:8080/assets/views/home/home.css.map",
+  "home/home.js": "http://127.0.0.1:8080/assets/views/home/home.js",
+  "home/home.js.map": "http://127.0.0.1:8080/assets/views/home/home.js.map",
+  "ionicons.eot?v=2.0.0": "http://127.0.0.1:8080/assets/views/ionicons.eot",
+  "ionicons.svg?v=2.0.0": "http://127.0.0.1:8080/assets/views/ionicons.svg",
+  "ionicons.ttf?v=2.0.0": "http://127.0.0.1:8080/assets/views/ionicons.ttf",
+  "ionicons.woff?v=2.0.0": "http://127.0.0.1:8080/assets/views/ionicons.woff",
+  "vendors/vendor.js": "http://127.0.0.1:8080/assets/views/vendors/vendor.js",
+  "vendors/vendor.js.map": "http://127.0.0.1:8080/assets/views/vendors/vendor.js.map"
+}

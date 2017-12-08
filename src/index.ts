@@ -9,6 +9,9 @@ import * as Session from 'koa-session';
 import * as logger from 'koa-logger';
 import {AppRoutes} from "./routes";
 
+
+
+
 createConnection().then(async connection => {
   //create koa app
   const app = new Koa();
@@ -35,7 +38,7 @@ createConnection().then(async connection => {
 
   //register all application routes
   AppRoutes.forEach(route=> router[route.method](route.path,route.action));
-  
+
   //logger
   app.use(logger())
   //run app

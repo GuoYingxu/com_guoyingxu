@@ -1,0 +1,16 @@
+{
+  "home/home.css": "http://127.0.0.1:8080/assets/packs/home/home.css",
+  "home/home.css.map": "http://127.0.0.1:8080/assets/packs/home/home.css.map",
+  "home/home.js": "http://127.0.0.1:8080/assets/packs/home/home.js",
+  "home/home.js.map": "http://127.0.0.1:8080/assets/packs/home/home.js.map",
+  "ionicons.eot?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.eot",
+  "ionicons.svg?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.svg",
+  "ionicons.ttf?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.ttf",
+  "ionicons.woff?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.woff",
+  "vendors/vendor-base.js": "http://127.0.0.1:8080/assets/packs/vendors/vendor-base.js",
+  "vendors/vendor-base.js.map": "http://127.0.0.1:8080/assets/packs/vendors/vendor-base.js.map",
+  "vendors/vendor-exten.js": "http://127.0.0.1:8080/assets/packs/vendors/vendor-exten.js",
+  "vendors/vendor-exten.js.map": "http://127.0.0.1:8080/assets/packs/vendors/vendor-exten.js.map",
+  "vendors/vendor-base.css": "http://127.0.0.1:8080/assets/packs/vendors/vendor-base.css",
+  "vendors/vendor-base.css.map": "http://127.0.0.1:8080/assets/packs/vendors/vendor-base.css.map"
+}

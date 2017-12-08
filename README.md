@@ -1,8 +1,11 @@
 # blog 
 
    > use koa
+
    > use typeorm
+
    > use vue
+   
    > use iview
 
 

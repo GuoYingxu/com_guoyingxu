@@ -1,0 +1,21 @@
+.page-face {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  .face-top {
+    background: black;
+    height: 50px;
+  }
+  .face-body {
+    height: 200px;
+  }
+  .face-word {
+    text-align: center;
+    margin-left: 10px;
+    color: white;
+    line-height: 50px;
+    font-size: 20px;
+  }
+}

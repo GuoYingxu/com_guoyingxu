@@ -5,5 +5,10 @@ export  const AppRoutes = [
     path:['/',"/index"],
     method: 'get',
     action: Index.HomePage
+  },
+  {
+    path:'/blog',
+    method:'get',
+    action: Index.BlogPage
   }
 ]

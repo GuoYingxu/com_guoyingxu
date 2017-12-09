@@ -1,0 +1,22 @@
+{
+  "blog/blog.css": "http://127.0.0.1:8080/assets/packs/blog/blog.css",
+  "blog/blog.css.map": "http://127.0.0.1:8080/assets/packs/blog/blog.css.map",
+  "blog/blog.js": "http://127.0.0.1:8080/assets/packs/blog/blog.js",
+  "blog/blog.js.map": "http://127.0.0.1:8080/assets/packs/blog/blog.js.map",
+  "home/home.css": "http://127.0.0.1:8080/assets/packs/home/home.css",
+  "home/home.css.map": "http://127.0.0.1:8080/assets/packs/home/home.css.map",
+  "home/home.js": "http://127.0.0.1:8080/assets/packs/home/home.js",
+  "home/home.js.map": "http://127.0.0.1:8080/assets/packs/home/home.js.map",
+  "ionicons.eot?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.eot",
+  "ionicons.svg?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.svg",
+  "ionicons.ttf?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.ttf",
+  "ionicons.woff?v=2.0.0": "http://127.0.0.1:8080/assets/packs/ionicons.woff",
+  "vendors/common.css": "http://127.0.0.1:8080/assets/packs/vendors/common.css",
+  "vendors/common.css.map": "http://127.0.0.1:8080/assets/packs/vendors/common.css.map",
+  "vendors/common.js": "http://127.0.0.1:8080/assets/packs/vendors/common.js",
+  "vendors/common.js.map": "http://127.0.0.1:8080/assets/packs/vendors/common.js.map",
+  "vendors/vendor-base.js": "http://127.0.0.1:8080/assets/packs/vendors/vendor-base.js",
+  "vendors/vendor-base.js.map": "http://127.0.0.1:8080/assets/packs/vendors/vendor-base.js.map",
+  "vendors/vendor-exten.js": "http://127.0.0.1:8080/assets/packs/vendors/vendor-exten.js",
+  "vendors/vendor-exten.js.map": "http://127.0.0.1:8080/assets/packs/vendors/vendor-exten.js.map"
+}

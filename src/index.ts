@@ -8,10 +8,9 @@ import * as Static from 'koa-static';
 import * as Session from 'koa-session';
 import * as logger from 'koa-logger';
 import {AppRoutes} from "./routes";
-
-
-
-
+import {oauthRouter} from './oauthRouter';
+import oauthModel from './controller/oauth/model';
+import koa2FallbackApiMiddleware  from './lib/koa2-history-api-fallback'
 createConnection().then(async connection => {
   //create koa app
   const app = new Koa();
@@ -36,13 +35,47 @@ createConnection().then(async connection => {
     }
   }))
 
-  //register all application routes
-  AppRoutes.forEach(route=> router[route.method](route.path,route.action));
-
+  
   //logger
   app.use(logger())
-  //run app
   app.use(bodyParser())
+
+  
+  //oauth router
+  app.use(oauthRouter(app).routes())
+  //admin oauth
+
+  const adminOauthRouter = new Router()
+  adminOauthRouter.all('/admin*',app.oauth.authenticate())
+  adminOauthRouter.all('/admin*',async (ctx,next) => {
+    console.log(ctx.url)
+    if(ctx.state.oauth && ctx.state.oauth.error && ctx.url!='/admin/login'){
+      // return ctx.body = {
+      //   originUri: ctx.request.url
+      // }
+      ctx.redirect('/admin/login')
+    }else{
+      await next()
+    } 
+  })
+  app.use(adminOauthRouter.routes())
+
+  //rewrite
+  app.use(koa2FallbackApiMiddleware({
+    rewrites: [
+      {
+        from:/^\/admin\/*/,
+        to: '/admin'
+      },
+      {
+        from:/^\/blog\//,
+        to:'/blog'
+      }
+    ],
+    verbose: true
+  }))
+  //register all application routes
+  AppRoutes.forEach(route=> router[route.method](route.path, route.action));
   app.use(router.routes());
   // static
   app.use(Static(`${__dirname}/public`));

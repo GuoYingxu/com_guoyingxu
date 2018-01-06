@@ -1,3 +1,4 @@
+import { Request } from 'oauth2-server';
 import "reflect-metadata";
 import {createConnection} from "typeorm";
 import * as Koa from "koa";
@@ -40,25 +41,30 @@ createConnection().then(async connection => {
   app.use(logger())
   app.use(bodyParser())
 
-  
+  app.use(async (ctx,next)=>{
+    ctx.request.session = ctx.session;
+    if(ctx.method =='get' && !ctx.session.loginUser && ctx.request.url !=='/admin/login'){
+      return ctx.redirect('/admin/login')
+    }
+    await next();
+  })
   //oauth router
-  app.use(oauthRouter(app).routes())
+  // app.use(oauthRouter(app).routes())
   //admin oauth
 
-  const adminOauthRouter = new Router()
-  adminOauthRouter.all('/admin*',app.oauth.authenticate())
-  adminOauthRouter.all('/admin*',async (ctx,next) => {
-    console.log(ctx.url)
-    if(ctx.state.oauth && ctx.state.oauth.error && ctx.url!='/admin/login'){
-      // return ctx.body = {
-      //   originUri: ctx.request.url
-      // }
-      ctx.redirect('/admin/login')
-    }else{
-      await next()
-    } 
-  })
-  app.use(adminOauthRouter.routes())
+  // const adminOauthRouter = new Router()
+  // adminOauthRouter.all('/admin*',app.oauth.authenticate())
+  // adminOauthRouter.all('/admin*',async (ctx,next) => {
+  //   if(ctx.state.oauth && ctx.state.oauth.error && ctx.url!='/admin/login'){
+  //     // return ctx.body = {
+  //     //   originUri: ctx.request.url
+  //     // } 
+  //     ctx.redirect('back','/admin/login')
+  //   }else{
+  //     await next()
+  //   } 
+  // })
+  // app.use(adminOauthRouter.routes())
 
   //rewrite
   app.use(koa2FallbackApiMiddleware({

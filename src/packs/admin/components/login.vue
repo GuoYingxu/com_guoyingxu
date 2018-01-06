@@ -14,20 +14,21 @@
               Input(v-model='form.userName', placeholder="请输入用户名")
                 span(slot='prepend')
                   Icon(:size="16",type='person')
-            FormItem(prop='passwrod')
+            FormItem(prop='password')
               Input(type='password', v-model='form.password',placeholder ='请输入密码')
                 span(slot='prepend')
                   Icon(:size='16',type='locked')
             FormItem
-              Button(type='primary', long, @click='handlerSubmit') 登录
+              Button(type='primary', long, @click='handleSumit') 登录
           p.login-tip 暂时不提供注册
 </template>
 <script>
+import axios from 'axios';
 export default {
   data () {
     return {
       form: {
-          userName: 'iview_admin',
+          userName: 'admin',
           password: ''
       },
       rules: {
@@ -41,8 +42,18 @@ export default {
     };
   },
   methods:{
-    handlerSubmit(){
-
+    handleSumit(){
+      this.$refs.loginForm.validate((valid)=>{
+        if(valid){
+          // this.$store.dispatch('oauth_login',{user_name: this.form.userName,password: this.form.password})
+          axios.post('/api/login',{user_name: this.form.userName,password:this.form.password}).then(response => {
+            console.log(response)
+            if(response.data.success == 'ok'){
+              this.$router.push('/home')
+            }
+          })
+        }
+      })
     }
   }
 }

@@ -1,6 +1,7 @@
 
 import Index from './controller/frontend/index';
 import Admin from './controller/backend/index';
+import {login} from './controller/api/LoginHandler';
 export  const AppRoutes = [
   {
     path:['/',"/index"],
@@ -26,5 +27,11 @@ export  const AppRoutes = [
     path: '/admin',
     method: 'get',
     action: Admin.AdminPage
+  },
+  {
+    path:'/api/login',
+    method:'post',
+    action:login 
   }
+
 ]

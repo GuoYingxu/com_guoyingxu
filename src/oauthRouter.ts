@@ -1,6 +1,7 @@
 import  * as Router from 'koa-router';
 import KoaOauthServer from './controller/oauth/oauthServer';
 import oauthModel from './controller/oauth/model';
+import  {login} from './controller/api/LoginHandler';
 export function oauthRouter(app){
   let _router = new Router({prefix:'/oauth'})
 
@@ -27,10 +28,6 @@ export function oauthRouter(app){
   })
 
   return _router;
-}
-async function login(ctx,next){
-  console.log('----login')
-  await next()
 }
 function checkLogin(){
 

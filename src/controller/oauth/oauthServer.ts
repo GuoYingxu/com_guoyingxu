@@ -93,8 +93,11 @@ export default class KoaOauthServer extends NodeOAuthServer{
           token: token
         }
       }catch(e) {
+        await this.handleError.call(this,ctx,response)
         return
       }
+
+      await this.handleResponse.call(this,ctx, response)
     }
   }
 

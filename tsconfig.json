@@ -4,12 +4,28 @@
          "es5",
          "es6"
       ],
-      "target": "es5",
+      "target": "es6",
       "module": "commonjs",
       "moduleResolution": "node",
-      "outDir": "./build",
+      "outDir": "./dist",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "sourceMap": true
-   }
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "declaration": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitReturns": true,
+      "stripInternal": true,
+      "pretty": true,
+      "strictNullChecks": true,
+      // "noUnusedLocals": true
+    },
+    "exclude": [
+      "node_modules",
+      "./test",
+      "./src/packs"
+    ],
+    "include":[
+      "src",
+    ]
 }

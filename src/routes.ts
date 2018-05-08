@@ -4,6 +4,11 @@ import Admin from './controller/backend/index';
 import {login} from './controller/api/LoginHandler';
 export  const AppRoutes = [
   {
+    path:'/version',
+    method:'get',
+    action: Index.Version
+  },
+  {
     path:['/',"/index"],
     method: 'get',
     action: Index.HomePage

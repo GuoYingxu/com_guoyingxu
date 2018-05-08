@@ -1,0 +1,23 @@
+{
+  "0.js": "assets/packs/0.js",
+  "1.js": "assets/packs/1.js",
+  "2.js": "assets/packs/2.js",
+  "3.js": "assets/packs/3.js",
+  "4.js": "assets/packs/4.js",
+  "5.js": "assets/packs/5.js",
+  "6.js": "assets/packs/6.js",
+  "7.js": "assets/packs/7.js",
+  "admin/admin.css": "assets/packs/admin/admin.css",
+  "admin/admin.js": "assets/packs/admin/admin.js",
+  "blog/blog.css": "assets/packs/blog/blog.css",
+  "blog/blog.js": "assets/packs/blog/blog.js",
+  "home/home.css": "assets/packs/home/home.css",
+  "home/home.js": "assets/packs/home/home.js",
+  "ionicons.svg?v=2.0.0": "assets/packs/ionicons-8b03a65b28d40cc7741741f32d1d21b8.svg",
+  "logo-min.jpg": "assets/packs/logo-min-e0cc44c02ea8120d1ef3a87fa25e37f2.jpg",
+  "logo.jpg": "assets/packs/logo-9f35d093728efc834cf6f8b15fd17eea.jpg",
+  "vendors/common.css": "assets/packs/vendors/common.css",
+  "vendors/common.js": "assets/packs/vendors/common.js",
+  "vendors/vendor-base.js": "assets/packs/vendors/vendor-base.js",
+  "vendors/vendor-exten.js": "assets/packs/vendors/vendor-exten.js"
+}

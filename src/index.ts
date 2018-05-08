@@ -76,7 +76,7 @@ createConnection().then(async connection => {
       {
         from:/^\/blog\//,
         to:'/blog'
-      }
+      },
     ],
     verbose: true
   }))

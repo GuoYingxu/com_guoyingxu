@@ -75,6 +75,7 @@
     "migrations:run": "ts-node ./node_modules/typeorm/cli.js migrations:run",
     "migrations:revert": "ts-node ./node_modules/typeorm/cli.js migrations:revert",
     "dev": "export NODE_ENV=development && webpack-dev-server --inline  --compress --config build/webpack/development.js",
-    "start_pro": "export NODE_ENV=production && export PORT=4000 && ts-node src/index.ts"
+    "start_pro": "export NODE_ENV=production && export PORT=4000 && ts-node src/index.ts",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   }
 }

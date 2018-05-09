@@ -33,7 +33,7 @@ module.exports = {
       user : 'guoyingxu',
       host : '47.92.100.38',
       ref  : 'origin/master',
-      repo : 'Guoyingxu@github.com:com_guoyingxu.git',
+      repo : 'git@github.com:GuoYingxu/com_guoyingxu.git',
       path : '/var/www/guoyingxu_com/production',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },

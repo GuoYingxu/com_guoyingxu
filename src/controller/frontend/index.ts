@@ -9,8 +9,11 @@ export async function BlogPage(context: Context){
 }
 export function Version(context: Context) {
   return  context.body= {
-    version: '1.0',
-    description: 'test update'
+    code: '2',
+    name: '2.0',
+    force_update:1,
+    url_android:"http://www.baidu.com",
+    info: 'test update'
   }
 }
 export default {

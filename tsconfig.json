@@ -13,11 +13,11 @@
       "sourceMap": true,
       "noImplicitAny": false,
       "declaration": true,
-      "noFallthroughCasesInSwitch": true,
-      "noImplicitReturns": true,
-      "stripInternal": true,
+      // "noFallthroughCasesInSwitch": true,
+      // "noImplicitReturns": true,
+      // "stripInternal": true,
       "pretty": true,
-      "strictNullChecks": true,
+      // "strictNullChecks": true,
       // "noUnusedLocals": true
     },
     "exclude": [

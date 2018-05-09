@@ -9,7 +9,7 @@ export async function BlogPage(context: Context){
 }
 export function Version(context: Context) {
   return  context.body= {
-    code: '2',
+    code: 2,
     name: '2.0',
     force_update:1,
     url_android:"http://www.baidu.com",

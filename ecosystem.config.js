@@ -9,7 +9,7 @@ module.exports = {
     {
       name      : 'guoyingxu.com',
       script    : './src/index.ts',
-      env: 
+      env: {
         COMMON_VARIABLE: 'true'
       },
       env_production : {

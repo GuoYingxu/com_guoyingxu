@@ -9,7 +9,7 @@ export async function BlogPage(context: Context){
 }
 export function Version(context: Context) {
   return  context.body= {
-    "url":"http://www.guoyingxu.com:4000/download/App-debug.apk",
+    "url":"http://www.guoyingxu.com:4000/download/app-debug.apk",
     "versionCode":4,
     "updateMessage":"1. 适配 Android 8.0\n2. 适配 Android 9.0\n3. 更新说明"
   }

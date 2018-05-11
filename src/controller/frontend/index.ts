@@ -9,11 +9,9 @@ export async function BlogPage(context: Context){
 }
 export function Version(context: Context) {
   return  context.body= {
-    code: 2,
-    name: '2.0',
-    force_update:1,
-    url_android:"http://www.baidu.com",
-    info: 'test update'
+    "url":"http://www.guoyingxu.com:4000/download/App-debug.apk",
+    "versionCode":4,
+    "updateMessage":"1. 适配 Android 8.0\n2. 适配 Android 9.0\n3. 更新说明"
   }
 }
 export default {
